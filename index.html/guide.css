@@ -1,0 +1,230 @@
+
+/* ================= NAVBAR BASE ================= */
+
+/* ===== HEADER ===== */
+header {
+    width: 100%;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* ===== NAVBAR CONTAINER ===== */
+.navbar {
+    max-width: 1400px;          /* Wider so Contact won’t cut */
+    margin: 0 auto;
+    padding: 18px 60px;         /* Equal side spacing */
+    display: flex;
+    align-items: center;
+}
+
+/* ===== BRAND (LOGO LEFT) ===== */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    height: 40px;
+}
+
+.brand h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1b4a78;
+    margin: 0;
+}
+
+/* ===== NAV LINKS ===== */
+nav {
+    margin-left: auto;          /* Push nav fully right */
+    display: flex;
+    align-items: center;
+    gap: 50px;                  /* Equal spacing */
+}
+
+/* ===== LINKS ===== */
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: #2c3e50;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* ===== GREEN HOVER UNDERLINE ===== */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #1b8f4d;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #1b8f4d;
+}
+
+nav a:hover::after {
+    width: 100%;}
+
+
+/* ===== HERO SECTION ===== */
+.service-hero {
+    margin-top: 90px;
+    padding: 120px 8%;
+    background: linear-gradient(135deg, #0f3d2e, #1f7a4d);
+    color: white;
+    text-align: center;
+}
+
+.service-hero h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.service-hero p {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+.hero-features {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-features span {
+    background: rgba(255,255,255,0.15);
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+/* ===== CONTENT ===== */
+.service-content {
+    padding: 100px 8%;
+    background: #f8fbf9;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.service-content h2 {
+    margin-bottom: 20px;
+    color: #1f7a4d;
+}
+
+.service-content h3 {
+    margin-top: 40px;
+    color: #145c3b;
+}
+
+.service-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.service-content ul li {
+    margin-bottom: 8px;
+}
+
+/* ===== CTA BOX ===== */
+.cta-box {
+    margin-top: 60px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #1f7a4d;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+    padding: 80px 8%;
+    background: #ffffff;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .service-hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #1f7a4d;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 250px;
+        padding: 20px;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+}

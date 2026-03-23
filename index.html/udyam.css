@@ -1,0 +1,154 @@
+/* ===== GLOBAL ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+    width: 100%;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== BRAND ===== */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    height: 40px;
+}
+
+.brand h1 {
+    font-size: 20px;
+    color: #1f7a4d;
+}
+
+/* ===== NAV LINKS ===== */
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Green underline hover */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #1f7a4d;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    min-width: 220px;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #1f7a4d;
+    border-radius: 2px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+         width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #f9f9f9;
+        border-radius: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: flex;
+    }
+}
