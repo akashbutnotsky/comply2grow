@@ -921,6 +921,7 @@
 </section>
 
 <!-- ══════════ CONTACT ══════════ -->
+<!-- ══════════ CONTACT ══════════ -->
 <section id="contact">
   <div class="contact-left">
     <div class="contact-eyebrow">GET IN TOUCH</div>
@@ -951,28 +952,37 @@
   </div>
 
   <div>
-    <div class="contact-form-card">
-      <div class="form-title">Request a Free Consultation</div>
-      <label class="form-label">YOUR NAME</label>
-      <input type="text" class="form-input" placeholder="e.g. Rahul Sharma" />
-      <label class="form-label">PHONE / WHATSAPP</label>
-      <input type="tel" class="form-input" placeholder="+91 98765 43210" />
-      <label class="form-label">SERVICE INTERESTED IN</label>
-      <select class="form-select form-input" style="margin-bottom:20px;">
-        <option value="">Select a service...</option>
-        <option>Website Design</option>
-        <option>Social Media Posting</option>
-        <option>Lead Generation</option>
-        <option>Google My Business</option>
-        <option>All Services</option>
-      </select>
-      <label class="form-label">BUSINESS NAME / MESSAGE</label>
-      <textarea class="form-textarea" placeholder="Tell us about your business..."></textarea>
-      <button class="form-submit">Send Message — It's Free! 🚀</button>
-    </div>
+    <!-- 🔥 JUST WRAPPED YOUR EXISTING FORM -->
+    <form action="https://formspree.io/f/xykllaoq" method="POST">
+      
+      <div class="contact-form-card">
+        <div class="form-title">Request a Free Consultation</div>
+
+        <label class="form-label">YOUR NAME</label>
+        <input type="text" name="name" class="form-input" placeholder="e.g. Rahul Sharma" />
+
+        <label class="form-label">PHONE / WHATSAPP</label>
+        <input type="tel" name="phone" class="form-input" placeholder="+91 98765 43210" />
+
+        <label class="form-label">SERVICE INTERESTED IN</label>
+        <select name="service" class="form-select form-input" style="margin-bottom:20px;">
+          <option value="">Select a service...</option>
+          <option>Website Design</option>
+          <option>Social Media Posting</option>
+          <option>Lead Generation</option>
+          <option>Google My Business</option>
+          <option>All Services</option>
+        </select>
+
+        <label class="form-label">BUSINESS NAME / MESSAGE</label>
+        <textarea name="message" class="form-textarea" placeholder="Tell us about your business..."></textarea>
+
+        <button type="submit" class="form-submit">Send Message — It's Free! 🚀</button>
+      </div>
+
+    </form>
   </div>
 </section>
-
 
 
 
